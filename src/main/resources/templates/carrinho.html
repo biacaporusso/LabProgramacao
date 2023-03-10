@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho de compras</title>
+</head>
+<body>
+
+<h2>Carrinho de compras</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+    <th>Preço</th>
+    <th>Quantidade</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="produto : ${sessionFavoritos}">
+    <td th:text="${produto.nome}"></td>
+    <td th:text="${produto.preco}"></td>
+    <td th:text="${produto.quantidade}"></td>
+  </tr>
+  </tbody>
+</table>
+<p><a href="/index">Listar todos os produtos</a></p>
+
+</body>
+</html>
